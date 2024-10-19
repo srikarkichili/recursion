@@ -132,9 +132,9 @@ def split_odd_10(nums):
         if final == len(nums):
             return ten % 10 == 0 and odd % 2 != 0
         if helper(final + 1, odd + nums[final], ten):
-            return True   
+            return True  
         if helper(final + 1, odd, ten + nums[final]):
-            return True     
+            return True    
         if helper(final + 1, odd, ten):
             return True
     return helper(0,0,0)
@@ -152,7 +152,7 @@ def split_53(nums):
     """
     def helper(final, sum3, sum5):
         if final == len(nums):
-            return sum3 == sum5  
+            return sum3 == sum5 
         x = nums[final]
         if x % 5 == 0:
             return helper(final + 1, sum3, sum5 + x)
